@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800");
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 1262px;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  background-color: #fff;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+input,
+textarea,
+select,
+option {
+  color: #555;
+  font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
+  font-size: 13.5px;
+  font-weight: normal;
+}
+img,
+fieldset,
+iframe {
+  border: 0 none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+em,
+address {
+  font-style: normal;
+}
+img,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+a {
+  color: #7d7d7d;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+button,
+label {
+  cursor: pointer;
+  cursor: hand;
+}
+button * {
+  position: relative;
+}
+button img {
+  left: -3px;
+  left: auto;
+}
+textarea {
+  overflow: auto;
+}
+html:first-child select {
+  height: 20px;
+  padding-right: 6px;
+}
+option {
+  padding-right: 6px;
+}
+.input_text,
+textarea {
+  margin: -1px 0;
+  padding-right: 1px;
+}
+.input_check,
+.input_radio {
+  width: 13px;
+  height: 13px;
+}
+.blind,
+legend,
+caption {
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+hr {
+  display: none;
+}
+legend {
+  width: 0;
+}
+:root legend {
+  margin-top: -1px;
+  font-size: 0;
+  line-height: 0;
+}
+caption {
+  line-height: 0;
+}
+
+.conwrap {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.conwrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.dn {
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  .conwrap {
+    max-width: 1400px;
+    width: 94%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+/* head */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+.head {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.head_top {
+  height: 58px;
+  border-bottom: 1px solid #eaeaea;
+}
+.head_top .links {
+  overflow: hidden;
+  float: left;
+  margin-top: 14px;
+}
+.head_top .links .lang {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  z-index: 100;
+  float: left;
+  width: 86px;
+  height: 21px;
+  padding-top: 7px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.head_top .links .lang.on {
+  height: 36px;
+  transition: all 0.3s;
+}
+.head_top .links .lang .this_lang {
+  padding-left: 15px;
+  background: url(../image/common/lang_kor.gif) no-repeat 10px center;
+}
+.head_top .links .lang .this_lang a {
+  display: block;
+  width: 38px;
+  padding-left: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #000;
+  background: url(../image/common/lang_arr.gif) no-repeat right center;
+}
+.head_top .links .lang ul {
+  width: 86px;
+  margin-top: 5px;
+}
+.head_top .links .lang ul li a {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  margin-left: -2px;
+  text-align: center;
+  color: #000;
+  background: url(../image/common/lang_eng.gif) no-repeat 12px center;
+}
+
+.head_top .links .sns {
+  padding-left: 93px;
+}
+.head_top .links .sns ul {
+  overflow: hidden;
+  display: flex;
+}
+.head_top .links .sns ul li {
+  margin-left: 7px;
+}
+.head_top .topmenu {
+  float: right;
+  margin-top: 20px;
+}
+.head_top .topmenu ul {
+  overflow: hidden;
+  display: flex;
+}
+.head_top .topmenu ul li {
+  margin-left: 10px;
+  padding-left: 12px;
+  background: url(../image/common/tm_bar.gif) no-repeat left center;
+}
+.head_top .topmenu ul li:first-child {
+  background: 0;
+}
+.head_top .topmenu ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #9b9a9a;
+}
+
+.head .gnb h1 {
+  float: left;
+  width: 162px;
+}
+.head .gnb .nav {
+  float: left;
+  width: calc(100% - 162px - 66px);
+  display: flex;
+  justify-content: space-between;
+}
+.head .gnb .nav > ul {
+  text-align: center;
+  width: 100%;
+}
+.head .gnb .nav > ul > li {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% / 7);
+  height: 89px;
+  line-height: 89px;
+  font-size: 17px;
+  color: #303030;
+  transition: all 0.3s;
+  position: relative;
+}
+.head .gnb .nav > ul > li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #c40f39;
+  position: relative;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.head .gnb .nav > ul > li.on::after {
+  opacity: 1;
+}
+.head .gnb .nav > ul > li > a {
+  display: block;
+  height: 89px;
+  line-height: 89px;
+  font-size: 17px;
+  color: #303030;
+  transition: all 0.3s;
+}
+.head .gnb .nav > ul > li.on > a {
+  color: #40f394;
+  transition: all 0.3s;
+}
+.head .gnb .nav > ul > li:nth-child(3) > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+#header .head .gnb .nav > ul {
+  position: relative;
+}
+#header .head .gnb .nav > ul::before {
+  content: "";
+  width: calc(100% + 450px + 450px);
+  height: 425px;
+  position: absolute;
+  left: -450px;
+  top: 89px;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+}
+#header .head .gnb .nav > ul > li > ul {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+#header.on .head .gnb .nav > ul::before {
+  visibility: visible;
+  opacity: 1;
+}
+header.head .gnb .nav > ul > li > ul {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+.head .gnb .nav > ul > li > ul > li {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+/* 267번째 줄부터 코딩하면 됨 */
