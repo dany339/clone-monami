@@ -1,0 +1,488 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800");
+
+/* Layer */
+body {
+  width: 100%;
+}
+#wrap {
+  width: 100%;
+}
+#container {
+  width: 100%;
+}
+#footer {
+  width: 100%;
+}
+
+/* visual */
+#visual {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 652px;
+  margin-top: 148px; /* 헤더 fixed로 인한 마진값 */
+}
+#visual > a {
+  display: block;
+  position: relative;
+  width: 71px;
+  height: 71px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  z-index: all 100;
+  margin-top: -35px;
+  transition: all 0.2s ease;
+}
+#visual > a > div:nth-child(1) {
+  width: 60%;
+  border: 0.5px solid rgba(255, 255, 255, 0.8);
+  transform: rotateZ(-45deg);
+  margin: -3px 0 0 -22px;
+  transition: all 0.2s ease-out;
+}
+#visual > a > div:nth-child(2) {
+  width: 0;
+  height: 0;
+  position: 0;
+  transition: all 0.2s ease-out;
+}
+
+#visual > a > div:nth-child(2) {
+  opacity: 0;
+}
+
+.vlist {
+  overflow: hidden;
+}
+.vlist li {
+  position: relative;
+  width: 100%;
+  height: 652px;
+}
+.vlist li .bgarea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.vlist li.v1 .bgarea {
+  background: url(../image/main/visual1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#visual .textarea {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1400px;
+  height: 100%;
+  margin-left: -700px;
+  z-index: 10;
+}
+#visual .textarea h3 {
+  font-size: 50px;
+  color: #fff;
+  line-height: 120%;
+  font-weight: 200;
+  margin: 0 0 0 120px;
+}
+#visual .textarea h3::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #fff;
+  margin: 157px 0 10px 0;
+}
+#visual .textarea p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 140%;
+  font-weight: 300;
+  margin: 30px 0 0 120px;
+}
+
+@media (max-width: 1600px) {
+  #visual > a {
+    display: block;
+    /* position: relative; */ /* 아래에 position: absolute가 나와서 빼도 될 듯 */
+    width: 71px;
+    height: 71px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 90%;
+    z-index: 100;
+    margin-top: -35px;
+    transition: all 0.2s;
+  }
+  #visual .vprev {
+    left: 3%;
+  }
+  #visual .vnext {
+    right: 3%;
+  }
+}
+
+@media (max-width: 1450px) {
+  #visual .textarea {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1280px;
+    height: 100%;
+    margin-left: -640px;
+    z-index: 10;
+  }
+}
+
+/*************************** contents ***************************/
+
+/* New */
+.new {
+  padding: 75px 0 90px;
+}
+.new .conwrap {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+}
+.new .tit {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.new .tit h2 {
+  height: 90px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #000;
+}
+.new .tit h2::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px 0 0;
+  background: #c40f39;
+}
+.new .tit p {
+  font-size: 13px;
+  color: #6e6e6e;
+  margin-top: 10px;
+}
+.new .toparea {
+  overflow: hidden;
+  margin: 13px 0 22px;
+}
+.new .toparea .box {
+  float: left;
+}
+.new .toparea .box:nth-child(1) {
+  margin: 155px 22px 0 0;
+}
+.new .toparea .box a img,
+.new .btmarea .box a img {
+  border-radius: 20px;
+}
+.new .btmarea {
+  overflow: hidden;
+  display: flex;
+}
+.new .btmarea .box:nth-child(1),
+.new .btmarea .box:nth-child(2) {
+  margin: 0 22px 0 0;
+}
+/* 여기 부분 추가했어요------------------------- */
+.new .btmarea .box.new3 {
+  height: 292px;
+}
+.new .btmarea .box.new5 {
+  height: 292px;
+}
+/* ------------------------------------------- */
+.new .box {
+  position: relative;
+}
+.new .box .ondiv {
+  display: table;
+  position: absolute;
+  left: 0; /* 기존 사이트에서는 15px */
+  top: 0; /* 기존 사이트에서는 15px */
+  background: #c40f39;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.6s;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+.new .box:hover .ondiv {
+  opacity: 1;
+  transition: all 0.6s;
+}
+.new .box .ondiv .align {
+  display: table-cell;
+  vertical-align: middle;
+}
+.new .box .ondiv .cate {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #eec7d0;
+}
+.new .box .ondiv .name {
+  font-size: 21px;
+  color: #fff;
+}
+.new .box .ondiv .plus {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 45px auto 0;
+  transform: rotateZ(180deg);
+  transition: all 0.4s 0.2s;
+}
+.new .box .ondiv .plus div:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.new .box .ondiv .plus div:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Product */
+.product {
+  overflow: hidden;
+  padding: 70px 0;
+  background: #eee;
+  text-align: center;
+}
+.product .tit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #000;
+  line-height: 120%;
+}
+.product .tit::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 10px auto;
+  background: #c40f39;
+}
+.product .p_tabs {
+  margin: 40px 0;
+}
+.product .p_tabs ul li {
+  display: inline-block;
+}
+.product .p_tabs ul li a {
+  display: block;
+  width: 153px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  color: #898989;
+  border: 2px solid #bcbcbc;
+  border-radius: 50px;
+  transition: all ease-in-out 0.3s;
+}
+.product .p_tabs ul li:hover {
+  border: 2px #c40f39;
+  color: #c40f39;
+}
+.p_lists {
+  overflow: hidden;
+}
+.p_lists ul {
+  overflow: hidden;
+  display: flex;
+}
+.p_lists ul li {
+  width: 266px;
+  margin: 0 9px;
+}
+.p_lists ul li:first-child {
+  margin-left: 0;
+}
+.p_lists ul li a {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.p_lists ul li a div img {
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+.p_lists ul li .thum {
+  height: 390px;
+}
+.p_lists ul li .info {
+  overflow: hidden;
+  background: #fff;
+  text-align: left;
+  padding: 0 30px 20px 30px;
+  border-radius: 0 0 18px 18px;
+  width: 100%;
+  height: 115px;
+  box-sizing: border-box;
+}
+.p_lists ul li .info .cate {
+  margin: 33px 0 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.p_lists ul li .info .name {
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+}
+.p_info {
+  margin-top: 60px;
+  width: 100%;
+  border-top: 1px dotted #ccc; /* dotted: 점선 */
+}
+.p_info .wrap {
+  width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+.p_info .wrap .arr1 {
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.p_info .wrap .arr2 {
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.p_info .wrap .ds {
+  width: 100px;
+  margin: -20px auto 0 auto;
+  background: #eee;
+  font-size: 12px;
+}
+.p_info .wrap .ds div {
+  margin-bottom: 25px;
+}
+
+/* Video */
+.video {
+  display: table;
+  width: 100%;
+  height: 570px;
+  text-align: center;
+  background: url(../image/main/bg_video.jpg) no-repeat center;
+  background-attachment: fixed;
+}
+.video_2 {
+  display: table;
+  width: 100%;
+  height: 570px;
+  text-align: center;
+  background-color: #eee;
+}
+.video .align {
+  display: table-cell;
+  vertical-align: middle;
+}
+.video .align .tit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.video .align p {
+  font-size: 13px;
+  color: #fff;
+}
+.video .align .btn_play a {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+  transition: all 0.3s;
+}
+.vod_pop {
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 4000;
+  margin-left: -550px;
+  width: 1100px;
+  height: 620px;
+}
+.bbs {
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  height: 355px;
+}
+.bbs .news {
+  float: left;
+  width: 650px;
+  height: 310px;
+  padding: 45px 49px 0 0;
+  border-right: 1px solid #ddd;
+}
+.bbs .news .tit {
+  position: relative;
+  margin-bottom: 15px;
+}
+.bbs .news .tit h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  line-height: 120%;
+}
+.bbs .news .tit a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 11px;
+  color: #3d3e38;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #3d3e38;
+}
+.bbs .news .tit::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 5px 0 0;
+  background: #c40f39;
+}
+.bbs .news .news_lists li {
+  position: relative;
+  line-height: 170%;
+}
+.bbs .news .news_lists li a {
+  color: #555;
+}
+/* https://www.monami.com/index.php : 모나미 사이트 */
+/* 462번째 줄부터 시작 */
