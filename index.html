@@ -20,6 +20,11 @@
     <meta name="data" content />
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-9WQR0KHD0V&cx=c&gtm=457e5571za200&tag_exp=101509156~103101750~103101752~103116025~103200001~103233424~103251618~103251620~103284320~103284322~103301114~103301116"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/dragScroll.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -521,6 +526,23 @@
               </div>
             </div>
           </div>
+          <script>
+            var $container = $(".product");
+            var $scroller = $(".p_lists");
+            var $wrapper = $(".wrapper_ul");
+
+            $(window).load(function () {
+              li = $(".p_lists ul li");
+              lilen = li.length;
+              liw = lilen * (li.width() + 18);
+              $(".p_lists ul").width(liw);
+            });
+
+            for (var i = 0; i < 0; i++) {
+              $wrapper.append("<li>" + i + "</li>");
+            }
+            bindDragScroll($container, $scroller);
+          </script>
 
           <div class="video">
             <!-- autoplay muted controls -->
