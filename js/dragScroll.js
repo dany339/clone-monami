@@ -10,7 +10,7 @@ function bindDragScroll($container, $scroller) {
 
   $container.on("mousedown", down);
   $container.on("click", preventDefault);
-  $scroller.on("mousewheel", horizontalMouseWheel); // prevent macbook trigger prev/next page while scrolling
+  $scroller.on("mousewheel", horizontalMouseWheel);
 
   function down(evt) {
     if (evt.button === 0) {
@@ -56,7 +56,6 @@ function bindDragScroll($container, $scroller) {
         },
         500,
         function (x, t, b, c, d) {
-          // easeOutCirc function from http://gsgd.co.uk/sandbox/jquery/easing/
           return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
         }
       );
@@ -85,3 +84,13 @@ function bindDragScroll($container, $scroller) {
     }
   }
 }
+
+// $(document).ready(function () {
+//   $(".p_tabs > ul > li").on("click", function () {
+//     const index = $(this).index();
+
+//     $(this).addClass("on").siblings().removeClass("on");
+
+//     $(".p_lists").removeClass("on").eq(index).addClass("on");
+//   });
+// });
