@@ -189,6 +189,13 @@ body {
   margin: 60px 0;
   text-align: center;
 }
+.paging ul {
+  display: inline-flex;
+  gap: 5px;
+}
+.paging ul li {
+  display: inline-block;
+}
 .paging a {
   display: inline-block;
   vertical-align: top;
@@ -200,30 +207,19 @@ body {
   font-size: 15px;
   color: #a8a8a8;
   border: 1px solid #ddd;
+  text-decoration: none;
   overflow: hidden;
 }
-.paging strong {
-  display: inline-block;
-  vertical-align: top;
-  width: 38px;
-  height: 38px;
-  text-align: center;
-  line-height: 38px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+.paging .paging_num.active {
   color: #c40f39;
   font-weight: 500;
   border: 1px solid #c40f39;
 }
-.paging a.page_prev {
+.page_prev {
   margin-right: 30px;
 }
-.paging a.page_next {
+.page_next {
   margin-left: 30px;
-}
-
-.br {
-  display: block;
 }
 
 /* ceo */
@@ -324,7 +320,8 @@ body {
 /* history */
 .history {
   position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .history .center_line {
@@ -336,25 +333,43 @@ body {
   height: 100%;
   background: #ddd;
 }
-
-.history_box {
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-}
 .history_box:nth-child(2n) {
   background-color: #f8f8f8;
 }
-.history .history_box .titlearea {
-  position: relative;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #ddd;
+.history_box .history_con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  flex-direction: row-reverse;
 }
-.history .history_box .titlearea::after {
-  content: "";
-  display: block;
-  clear: both;
+.history_box .history_con figure {
+  order: 2;
+  padding: 0 60px;
+}
+.history_box .history_con .history_txt_con {
+  order: 1;
+}
+.history_box:nth-child(2n) .history_con figure {
+  order: 1;
+  margin-left: auto;
+}
+.history_box:nth-child(2n) .history_con .history_txt_con {
+  order: 2;
+}
+.history .history_box .titlearea {
+  padding: 60px 60px 0 60px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 25px;
+  text-align: right;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 10px;
+}
+.history .history_box:nth-child(2n) .titlearea {
+  flex-direction: row;
+  text-align: left;
 }
 .history .history_box .titlearea .tit {
   font-size: 33px;
@@ -366,17 +381,40 @@ body {
   color: #c40f39;
 }
 .history .history_box .titlearea .year {
-  position: absolute;
-  top: 62px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+  padding-bottom: 5px;
+}
+.history .history_box .titlearea .red {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #c40f39;
+  bottom: 0px;
+  right: 0;
+  transform: translate(50%, 50%);
+  z-index: 2;
+}
+.history .history_box:nth-child(2n) .titlearea .red {
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+.history .history_box .history_txt {
+  padding: 17px 60px 60px 60px;
 }
 .history .history_box dl {
   overflow: hidden;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.history .history_box:nth-child(2n) dl {
+  flex-direction: row;
+  text-align: left;
 }
 .history .history_box dl dt {
-  width: 54px;
+  width: 54px; /* gap으로 하면 년도가 길어졌을 때, (2011, 2020)의 너비가 달라서 dd의 정렬이 안 맞게 됨 */
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #c40f39;
@@ -387,23 +425,86 @@ body {
   font-size: 14px;
   color: #777;
 }
-.history .history_box.tl {
-  text-align-last: left;
+
+/* ci */
+.ci .num_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+  color: #000;
+  margin-bottom: 20px;
 }
-/* .history .history_box.tl .titlearea {
-  padding-left: 60px;
-} */
-.history .history_box.tl .titlearea .tit {
-  float: left;
-}
-.history .history_box.tl .titlearea .red {
-  position: absolute;
-  left: -2px;
-  bottom: -3px;
-  width: 5px;
-  height: 5px;
+.ci .num_title span.num {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  margin: 5px 5px 0 0;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 29px;
+  text-align: center;
+  vertical-align: bottom;
+  color: #fff;
   background: #c40f39;
-  z-index: 3;
+}
+
+.ci_logo_lang {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ci_logo .en,
+.ci_logo .kr {
+  width: 671px;
+  margin-bottom: 70px;
+}
+.ci_logo .downs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.ci_logo .downs a {
+  display: block;
+  width: 325px;
+  height: 53px;
+  text-align: center;
+  line-height: 53px;
+  border: 1px solid #e5e5e5;
+  color: #666;
+  transition: all 0.3s;
+}
+.ci_logo .downs a:hover {
+  background: #c40f39;
+  color: #fff;
+}
+.ci_logo .textbox {
+  clear: both;
+  display: table;
+  background: url(../image/ci/ci_logo_textbox_bg.jpg) no-repeat;
+  width: 1398px;
+  height: 401px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.ci_logo .textbox .align {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ci_logo .textbox .align p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #dadada;
+  line-height: 180%;
+  font-weight: 300;
+}
+.ci_logo .textbox .align p:last-child {
+  margin: 0;
+}
+.ci_logo .textbox .align p span {
+  display: inline-block;
+  background: #c40f39;
+  line-height: 130%;
 }
 
 /* 상품 product */
@@ -434,6 +535,7 @@ body {
 }
 .product_list ul li a .thum {
   position: relative;
+  overflow: hidden;
 }
 .product_list ul li a .thum .ondiv {
   display: block;

@@ -20,6 +20,9 @@
     <meta name="data" content />
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/product.js" defer></script>
     <!-- <link rel="stylesheet" type="text/css" href="../css/about.css" /> -->
   </head>
   <body>
@@ -225,12 +228,7 @@
           <!-- pagetitle: e -->
 
           <!-- pagetabs: s -->
-          <div class="pagetabs">
-            <ul class="m1">
-              <li class="on"><a href="#">CEO 메시지</a></li>
-              <li><a href="#">회사연혁</a></li>
-            </ul>
-          </div>
+          <div class="pagetabs" style="border: 0px solid transparent"></div>
           <!-- pagetabs: e -->
 
           <!-- title1: s -->
@@ -239,251 +237,305 @@
 
           <!-- subcate: s -->
           <ul class="subcate">
-            <li><a href="#">고급볼펜</a></li>
+            <li class="on"><a href="#">고급볼펜</a></li>
             <li><a href="#">만연필</a></li>
           </ul>
           <!-- subcate: e -->
 
-          <!-- product_list: s -->
-          <div class="product_list">
-            <ul>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2010001011_file6_1728535790wh9gbf4cqu.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+          <div class="product_con">
+            <div class="product_list">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2010001011_file6_1728535790wh9gbf4cqu.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">제니스7 데스크펜</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2040136001_file6_1713138750ujw6qaj97g.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">제니스7 데스크펜</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2040136001_file6_1713138750ujw6qaj97g.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">프러스펜 3000 프라임</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/8801067962537_file6_16993368522ze8t9y6ul.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">프러스펜 3000 프라임</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/8801067962537_file6_16993368522ze8t9y6ul.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">153 리스펙트 리파인</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2040048020_file6_1681086837wink3y4zfr.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">153 리스펙트 리파인</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2040048020_file6_1681086837wink3y4zfr.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">만연필</div>
-                    <div class="product_name">153 아이디 만년필</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2040048012_file6_1583298386d4wy0fw22t.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">만연필</div>
+                      <div class="product_name">153 아이디 만년필</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2040048012_file6_1583298386d4wy0fw22t.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">만연필</div>
-                    <div class="product_name">153 네오 만년필 EF</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2110000001_file6_15740631264g0err5skc.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">만연필</div>
+                      <div class="product_name">153 네오 만년필 EF</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2110000001_file6_15740631264g0err5skc.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">만연필</div>
-                    <div class="product_name">라인 만년필</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2011071003_file6_1556070896zlny1by73y.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">만연필</div>
+                      <div class="product_name">라인 만년필</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2011071003_file6_1556070896zlny1by73y.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">153 네이처</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2015321003_file6_153800521194eznh2ta7.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">153 네이처</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2015321003_file6_153800521194eznh2ta7.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">153 블라썸</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2040048001_file6_1519117090gwwh3ty7fi.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">153 블라썸</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2040048001_file6_1519117090gwwh3ty7fi.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">만연필</div>
-                    <div class="product_name">153 네오 만년필 F</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="thum">
-                    <img
-                      src="../image/product/2010209001_file6_15106474920b1lr1fhnf.jpg"
-                      alt=""
-                      width="264"
-                      height="390"
-                    />
-                    <div class="ondiv">
-                      <div class="btn_plus">
-                        <div></div>
-                        <div></div>
+                    <div class="info">
+                      <div class="cate1">만연필</div>
+                      <div class="product_name">153 네오 만년필 F</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2010209001_file6_15106474920b1lr1fhnf.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="info">
-                    <div class="cate1">프리미엄 펜</div>
-                    <div class="product_name">153 블랙 & 화이트</div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">153 블랙 & 화이트</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/0file6_15106488276b3copnqua.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <div class="cate1">프리미엄 펜</div>
+                      <div class="product_name">153 골드</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="paging">
+              <a href="#" class="page_prev"
+                ><img src="../image/common/page_prev.gif" alt=""
+              /></a>
+              <ul id="js-pagination"></ul>
+              <a href="#" class="page_next"
+                ><img src="../image/common/page_next.gif" alt=""
+              /></a>
+            </div>
           </div>
-          <!-- product_list: e -->
-
-          <!-- paging: s -->
-
-          <div class="paging">
-            <a href="#" class="page_prev">
-              <img src="../image/common/page_prev.gif" alt="" />
-            </a>
-            <strong>1</strong>
-            <a href="./product/product_list.php?ccode=005&pg=2">2</a>
-            <a href="#" class="page_next">
-              <img src="../image/common/page_next.gif" alt="" />
-            </a>
+          <div class="product_con">
+            <div class="product_list">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="thum">
+                      <img
+                        src="../image/product/2040048020_file6_1681086837wink3y4zfr.jpg"
+                        alt=""
+                        width="264"
+                        height="390"
+                      />
+                      <div class="ondiv">
+                        <div class="btn_plus">
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <div class="cate1">만년필</div>
+                      <div class="product_name">153 아이디 만년필</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="paging">
+              <a href="#" class="page_prev"
+                ><img src="../image/common/page_prev.gif" alt=""
+              /></a>
+              <ul id="js-pagination"></ul>
+              <a href="#" class="page_next"
+                ><img src="../image/common/page_next.gif" alt=""
+              /></a>
+            </div>
           </div>
-          <!-- paging: e -->
 
           <!-- btn_top: s -->
           <div class="btn_top">
@@ -619,7 +671,7 @@
               <a href="#" target="_blank" class="btn_kakao">카카오톡 문의</a>
             </div>
             <div class="fam_site">
-              <a href="#">FAMILY SITE</a>
+              <a>FAMILY SITE</a>
               <ul>
                 <li><a href="#">모나미몰</a></li>
                 <li><a href="#">모나르떼</a></li>
