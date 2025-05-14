@@ -53,25 +53,10 @@ body {
   background: url(../image/ceo/page_visual1.jpg) no-repeat center;
 }
 .pn2 {
-  background: url(/images/page/page_visual2.jpg) no-repeat center;
-}
-.pn3 {
-  background: url(/images/page/page_visual3.jpg) no-repeat center;
+  background: url(../image/product/page_visual2.jpg) no-repeat center;
 }
 .pn4 {
-  background: url(/images/page/page_visual4.jpg) no-repeat center;
-}
-.pn5 {
-  background: url(/images/page/page_visual5.jpg) no-repeat center;
-}
-.pn6 {
-  background: url(/images/page/page_visual6.jpg) no-repeat center;
-}
-.pn7 {
-  background: url(/images/page/page_visual2.jpg) no-repeat center;
-}
-.pn8 {
-  background: url(/images/page/page_visual8.jpg) no-repeat center;
+  background: url(../image/faq/page_visual4.jpg) no-repeat center;
 }
 
 .pagetabs {
@@ -618,9 +603,14 @@ body {
 }
 
 /* 제품 상세 */
+.product_view_container#container {
+  padding-bottom: 0;
+}
+
 .product_view {
   width: 100%;
   overflow: hidden;
+  padding-bottom: 150px;
 }
 .product_view .conwrap {
   position: relative;
@@ -646,4 +636,315 @@ body {
   position: relative;
   border-left: 1px solid #ddd;
   padding-left: 9px;
+}
+.product_view .product_info::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.product_view .product_info .bgarea1 {
+  position: absolute;
+  left: -50%;
+  top: 163px;
+  z-index: -1;
+  width: 1000%;
+  height: 100%;
+  background: #f8f8f8;
+}
+.product_view .p_gall {
+  float: left;
+}
+.product_view .p_gall .big {
+  overflow: hidden;
+  width: 447px;
+  height: 656px;
+  border: 1px solid #ddd;
+}
+.product_view .p_gall .thumb {
+  position: relative;
+  width: 449px;
+  margin-top: 10px;
+}
+.product_view .p_gall .thumb a {
+  height: 100%;
+  background: #fff;
+}
+.product_view .p_gall .thumb .tprev img,
+.product_view .p_gall .thumb .tnext img {
+  transform: translateY(80%);
+}
+.product_view .p_gall .thumb .tprev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #ddd;
+}
+.product_view .p_gall .thumb .tnext {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #ddd;
+}
+.product_view .p_gall .thumb .thum_wrap {
+  overflow: hidden;
+  width: 333px;
+  height: 108px;
+  margin: 0 auto;
+}
+.product_view .p_gall .thumb .thum_wrap ul {
+  width: 10000px;
+}
+.product_view .p_gall .thumb .thum_wrap ul li {
+  float: left;
+  width: 71px;
+  height: 106px;
+  margin-right: 13px;
+  border: 1px solid #ddd;
+}
+.product_view .p_info {
+  float: right;
+  width: 871px;
+}
+.product_view .p_info .p_name {
+  margin: 40px 0 25px;
+}
+.product_view .p_info .p_name .pname {
+  font-size: 32px;
+  color: #333;
+}
+.product_view .p_info .p_name .pname::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 10px 0;
+  background: #c40f39;
+}
+.product_view .p_info .p_name .cate {
+  font-size: 19px;
+  color: #666;
+}
+.product_view .p_info .p_info_list {
+  position: relative;
+  padding-top: 25px;
+}
+.product_view .p_info .p_info_list:before {
+  content: "";
+  display: block;
+  width: 10000px;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  left: -61px;
+  top: 0;
+}
+.product_view .p_info .p_info_list > div {
+  margin-bottom: 25px;
+}
+.product_view .p_info .p_info_list .tit {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.product_view .p_info .p_info_list .tit::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #c40f39;
+  margin-right: 13px;
+  transform: translateY(-50%);
+}
+.product_view .p_info .p_info_list .key_features ol li {
+  font-size: 14px;
+  color: #777;
+  line-height: 180%;
+}
+.product_view .p_info .p_info_list .ink_color {
+  position: relative;
+}
+.product_view .p_info .p_info_list .btn_color {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #7c7c7c;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+}
+.product_view .p_info .p_info_list .ink_color ul,
+.product_view .p_info .p_info_list .body_color ul {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.product_view .p_info .p_info_list .ink_color ul li,
+.product_view .p_info .p_info_list .body_color ul li {
+  float: left;
+  width: 43px;
+  height: 42px;
+  margin: 0 3px 3px 0;
+}
+.product_view .p_info .p_info_list .ink_color ul li:nth-child(19n),
+.product_view .p_info .p_info_list .body_color ul li:nth-child(19n) {
+  margin-right: 0;
+}
+.product_view .p_info .p_info_list .body_color {
+  position: relative;
+}
+.product_view .p_info .p_info_list .point_size p {
+  font-family: "Montserrat";
+  font-size: 15px;
+}
+.product_view .p_info .p_info_list .download ul {
+  overflow: hidden;
+}
+.product_view .p_info .p_info_list .download ul li {
+  float: left;
+  margin-right: 5px;
+}
+.product_view .p_info .p_info_list .download ul li a {
+  display: block;
+  width: 146px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  background: #f4f4f4;
+  color: #7c7c7c;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+.product_view .p_info .p_info_list .download ul li a img {
+  display: inline-block;
+  margin-right: 5px;
+}
+.product_view .view_btns {
+  margin-right: 5px;
+}
+.product_view .view_btns a {
+  display: inline-block;
+  width: 146px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: #fff;
+  background: #c40f39;
+}
+
+@media (max-width: 1450px) {
+  .product_view .conwrap {
+    position: relative;
+    border-left: 1px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 9px;
+  }
+  .product_view .p_info {
+    float: right;
+    width: 55%;
+  }
+  .product_view .p_info .p_info_list::before {
+    content: "";
+    display: block;
+    width: 10000px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    left: -65px;
+    top: 0;
+  }
+  .product_view .p_info .p_info_list .ink_color ul li:nth-child(19n),
+  .product_view .p_info .p_info_list .body_color ul li:nth-child(19n) {
+    margin-right: 3px;
+  }
+}
+
+/* faq */
+.faq {
+  width: 1400px;
+  margin: 0 auto;
+}
+.faq_box {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px 50px 8px 43px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.faq_box.on {
+  background: #f8f8f8;
+}
+.faq_box .qustion {
+  padding-left: 60px;
+  background: url(../image/faq/faq_q.png) no-repeat left top;
+}
+.faq_box .qustion a {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.faq_box.on .qustion a {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #c40f39;
+  padding-bottom: 20px;
+}
+.faq_box .qustion a .arr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotateZ(130deg) skew(-9deg);
+  transition: all 0.3s;
+}
+.faq_box.on .qustion a .arr {
+  top: 10px;
+  transform: rotateZ(309deg) skew(-9deg);
+}
+.faq_box .answer {
+  display: none;
+  padding: 15px 0;
+  border-top: 1px solid #dedede;
+}
+.faq_box .answer p {
+  font-size: 14.5px;
+  color: #666;
+  line-height: 200%;
+}
+.faq_box .answer .dot {
+  display: block;
+}
+.faq_box .answer .dot::before {
+  content: "";
+  display: inline-block;
+  transform: translateY(-60%);
+  width: 5px;
+  height: 5px;
+  background: #c40f39;
+  margin-right: 13px;
+}
+
+@media (max-width: 1450px) {
+  .faq {
+    width: 94%;
+    margin: 0 auto;
+    word-break: keep-all;
+  }
+  .faq .br {
+    display: none;
+  }
 }

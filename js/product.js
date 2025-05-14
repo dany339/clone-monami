@@ -18,7 +18,7 @@ function productListTabAction(index) {
   $productListTabCon.hide();
   $productListTabCon.eq(index).show();
 
-  // 탭 변경 시 해당 탭의 페이징 초기화
+  /*  탭 변경 시 해당 탭의 페이징 초기화 */
   renderPagination(1, index);
 }
 
@@ -36,7 +36,7 @@ function renderPagination(currentPage, tabIndex) {
 
   const fragmentPage = document.createDocumentFragment();
 
-  // 페이지 번호
+  /* 페이지 번호 */
   for (let i = first; i <= Math.min(last, totalPage); i++) {
     const li = document.createElement("li");
     li.insertAdjacentHTML(
@@ -48,12 +48,12 @@ function renderPagination(currentPage, tabIndex) {
     fragmentPage.appendChild(li);
   }
 
-  // 기존 페이징 제거 후 새로운 페이징 추가
+  /* 기존 페이징 제거 후 새로운 페이징 추가 */
   const paginationContainer = $currentTab.find("#js-pagination")[0];
   paginationContainer.innerHTML = "";
   paginationContainer.appendChild(fragmentPage);
 
-  // 아이템 표시/숨김 처리
+  /* 아이템 표시/숨김 처리 */
   const items = $currentTab.find(".product_list ul li");
   items.each((index, item) => {
     if (
@@ -66,7 +66,7 @@ function renderPagination(currentPage, tabIndex) {
     }
   });
 
-  // prev/next 버튼 활성화/비활성화 처리
+  /* prev/next 버튼 활성화/비활성화 처리 */
   const prevBtn = $currentTab.find(".page_prev")[0];
   const nextBtn = $currentTab.find(".page_next")[0];
 
@@ -75,7 +75,7 @@ function renderPagination(currentPage, tabIndex) {
     nextBtn.style.opacity = currentPage === totalPage ? "0.5" : "1";
   }
 
-  // 이벤트 리스너 추가
+  /* 이벤트 리스너 추가 */
   $currentTab.find("#js-pagination a").on("click", function (e) {
     e.preventDefault();
     const selectedPage = parseInt($(this).data("num"));
@@ -84,7 +84,7 @@ function renderPagination(currentPage, tabIndex) {
     }
   });
 
-  // prev/next 버튼 이벤트 리스너
+  /* prev/next 버튼 이벤트 리스너 */
   if (prevBtn) {
     prevBtn.onclick = function (e) {
       e.preventDefault();
@@ -104,7 +104,11 @@ function renderPagination(currentPage, tabIndex) {
   }
 }
 
-// 초기 페이징 렌더링
+/* 초기 페이징 렌더링 */
 document.addEventListener("DOMContentLoaded", function () {
   renderPagination(1, 0);
 });
+
+/* product_view */
+const productBigImg = $(".p_gall .big > ul >li");
+const productSmallImg = $(".thum_wrap ul >li");
