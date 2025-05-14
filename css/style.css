@@ -948,3 +948,204 @@ body {
     display: none;
   }
 }
+
+/* inquiry 문의하기 */
+.inquiry {
+}
+.inquiry .bgarea {
+}
+.inquiry .contactus {
+  width: 1200px;
+  height: 850px;
+  margin: 0 auto;
+  padding: 95px 100px 0;
+  background: url(../image/faq/inquiry_bg.jpg) no-repeat;
+}
+.inquiry .contactus h4 {
+  margin-bottom: 35px;
+  font-family: "Montserrat";
+  font-size: 36px;
+  color: #fff;
+}
+.inquiry .contactus .formarea {
+  overflow: hidden;
+}
+.inquiry .contactus .formarea .fl {
+  float: left;
+  width: 572px;
+}
+.inquiry .contactus .formarea .fl > div {
+  margin-bottom: 15px;
+}
+.inquiry .contactus .formarea .fl div#select_box {
+  position: relative;
+  width: 100%;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.8) url(../image/faq/select_arrow.png) 95%
+    center no-repeat;
+  border: 1px solid #b7b6b5;
+}
+.inquiry .contactus .formarea .fl div#select_box label {
+  position: absolute;
+  font-size: 15px;
+  top: 17px;
+  left: 4%;
+  color: #777;
+}
+.inquiry .contactus .formarea .fl select {
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  line-height: 58px;
+  padding: 0%;
+  opacity: 0;
+  filter: alpha(opacity=0); /* IE 8 */
+}
+.inquiry .contactus .formarea .fl input[type="text"] {
+  width: 92%;
+  padding: 0 4%;
+  height: 58px;
+  line-height: 58px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+}
+.inquiry .contactus .formarea .fl textarea {
+  width: 92%;
+  padding: 20px 4%;
+  height: 76px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+  resize: none;
+}
+.filebox label {
+  display: inline-block;
+  width: 92%;
+  padding: 20px 4%;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.8) url(/images/page/file_upload.gif) 96%
+    center no-repeat;
+  cursor: pointer;
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+  color: #777;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.filebox .upload-name {
+  display: none;
+  padding: 20px 4%;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: 0.25em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ie9_tit {
+  position: relative;
+}
+.ie9_tit label {
+  position: absolute;
+  left: 4.1%;
+  top: 19px;
+  font-size: 15px;
+  color: #777;
+}
+.inquiry .ie9_tit label > span {
+  position: absolute;
+  top: -5px;
+  left: 70px;
+  width: 370px;
+  display: inline-block;
+  font-size: 12px;
+  cursor: none;
+}
+.inquiry .contactus .formarea .fr {
+  float: right;
+  width: 592px;
+}
+.inquiry .contactus .formarea .fr .textarea {
+  overflow-y: scroll;
+  width: 92%;
+  height: 500px;
+  padding: 20px 4%;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 180%;
+}
+.inquiry .contactus .formarea .fr .textarea .tit {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.inquiry .contactus .formarea .fr .textarea textarea {
+  width: 100%;
+  height: 2150px;
+  border: 0;
+  outline: 0;
+  background: 0;
+  resize: none;
+  word-break: keep-all;
+  overflow-y: hidden;
+}
+
+.inquiry .contactus .formarea .fr .chkarea {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+}
+.inquiry .contactus .formarea .fr .chkarea input {
+  width: 15px;
+  height: 15px;
+  background: none;
+}
+.btn_send {
+  margin: 50px 0 0;
+  text-align: center;
+}
+.btn_send a {
+  display: inline-block;
+  width: 380px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #c40f39;
+  transition: all 0.3s;
+}
+.btn_send a:hover {
+  background: #c40f39;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1450px) {
+  .inquiry .contactus {
+    width: 94%;
+    height: 850px;
+    margin: 0 auto;
+    padding: 95px 3% 0;
+    background: url(/images/page/inquiry_bg.jpg) no-repeat;
+  }
+}
