@@ -660,6 +660,12 @@ body {
   height: 656px;
   border: 1px solid #ddd;
 }
+.product_view .p_gall .big ul li {
+  display: none;
+}
+.product_view .p_gall .big ul li:first-child {
+  display: block;
+}
 .product_view .p_gall .thumb {
   position: relative;
   width: 449px;
@@ -700,6 +706,10 @@ body {
   height: 106px;
   margin-right: 13px;
   border: 1px solid #ddd;
+  cursor: pointer;
+}
+.product_view .p_gall .thumb .thum_wrap ul li:hover {
+  border-color: #c40f39;
 }
 .product_view .p_info {
   float: right;
@@ -1026,7 +1036,7 @@ body {
   width: 92%;
   padding: 20px 4%;
   vertical-align: middle;
-  background: rgba(255, 255, 255, 0.8) url(/images/page/file_upload.gif) 96%
+  background: rgba(255, 255, 255, 0.8) url(../image/faq/file_upload.gif) 96%
     center no-repeat;
   cursor: pointer;
   border: 1px solid #b7b6b5;
