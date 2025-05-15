@@ -110,5 +110,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* product_view */
-const productBigImg = $(".p_gall .big > ul >li");
-const productSmallImg = $(".thum_wrap ul >li");
