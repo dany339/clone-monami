@@ -108,5 +108,3 @@ function renderPagination(currentPage, tabIndex) {
 document.addEventListener("DOMContentLoaded", function () {
   renderPagination(1, 0);
 });
-
-/* product_view */
