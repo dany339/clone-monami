@@ -12,7 +12,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  min-width: 1262px;
+  min-width: 1260px;
 }
 html {
   overflow-y: scroll;
@@ -744,8 +744,7 @@ header.head .gnb .nav > ul > li > ul {
 
 @media (max-width: 1400px) {
   .allmenu {
-    width: 100%;
-    left: 0;
+    width: 107%;
   }
 }
 
@@ -757,6 +756,7 @@ header.head .gnb .nav > ul > li > ul {
   bottom: 30%;
   z-index: 2000;
   border: 2px solid #c40f39;
+  background: #fff;
 }
 
 /* Video Test */

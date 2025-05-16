@@ -331,6 +331,11 @@ body {
   order: 2;
   padding: 0 60px;
 }
+.history_box .history_con figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .history_box .history_con .history_txt_con {
   order: 1;
 }
@@ -491,7 +496,24 @@ body {
   background: #c40f39;
   line-height: 130%;
 }
-
+@media (max-width: 1450px) {
+  .ci_logo .en {
+    float: left;
+    width: 49%;
+    margin-bottom: 70px;
+  }
+  .ci_logo .kr {
+    float: right;
+    width: 49%;
+    margin-bottom: 70px;
+  }
+  .ci_logo img {
+    width: 100%;
+  }
+  .ci_logo .textbox {
+    width: 100%;
+  }
+}
 /* 상품 product */
 
 /* 리스트 */
@@ -603,11 +625,8 @@ body {
   .product_list ul li {
     float: left;
     width: 264px;
-    margin: 0 17px 49px 0;
+    margin: 0 17px 17px 0;
     border: 1px solid #ddd;
-  }
-  .product_list ul li:nth-child(4n) {
-    margin-right: 0;
   }
   .product_list ul li:nth-child(5n) {
     margin-right: 17px;
@@ -875,6 +894,9 @@ body {
   .product_view .p_info .p_info_list .body_color ul li:nth-child(19n) {
     margin-right: 3px;
   }
+  .product_list ul {
+    justify-content: center;
+  }
 }
 
 /* faq */
@@ -980,9 +1002,12 @@ body {
 }
 .inquiry .contactus .formarea {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 .inquiry .contactus .formarea .fl {
-  float: left;
+  /* float: left; */
   width: 572px;
 }
 .inquiry .contactus .formarea .fl > div {
@@ -1090,7 +1115,7 @@ body {
   cursor: none;
 }
 .inquiry .contactus .formarea .fr {
-  float: right;
+  /* float: right; */
   width: 592px;
 }
 .inquiry .contactus .formarea .fr .textarea {
@@ -1157,6 +1182,6 @@ body {
     height: 850px;
     margin: 0 auto;
     padding: 95px 3% 0;
-    background: url(/images/page/inquiry_bg.jpg) no-repeat;
+    background: url(../image/faq/inquiry_bg.jpg) no-repeat;
   }
 }
