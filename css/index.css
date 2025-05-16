@@ -483,6 +483,14 @@ body {
   position: relative;
   line-height: 170%;
 }
+.bbs .news .news_lists li + li a {
+  display: inline-block;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
 .bbs .news .news_lists li a {
   color: #555;
 }
@@ -581,14 +589,12 @@ body {
   float: left;
   width: 349px;
   height: 355px;
-  background: url(/images/main/shop_bg.png) no-repeat;
-  border-right: 1px solid #ddd;
+  background: url(../image/main/shop_bg.png) no-repeat;
   text-align: center;
 }
 .bbs .shop .tit {
   margin: 65px 0 0;
   padding-top: 75px;
-  background: url(/images/main/shop_tit_bg.png) no-repeat center 0px;
 }
 .bbs .shop .tit h2 {
   font-family: "Montserrat", sans-serif;
