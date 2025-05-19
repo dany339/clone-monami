@@ -185,8 +185,9 @@ caption {
   transition: all 0.3s;
 }
 .head_top .links .lang.on {
-  height: 36px;
+  height: 43px;
   transition: all 0.3s;
+  background: #fff;
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
@@ -203,7 +204,7 @@ caption {
 }
 .head_top .links .lang ul {
   width: 86px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .head_top .links .lang ul li a {
   display: block;
